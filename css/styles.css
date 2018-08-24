@@ -10,7 +10,8 @@
 }
 
 body {
-  background-color: #D9CB9E;
+  /* background-color: #D9CBAE; */
+  background-color: #EFF0E8;
   font-family: palanquin;
 }
 
@@ -43,6 +44,8 @@ form {
   border: 2px solid #1E1E20;
   border-radius: 5px;
   padding: 20px;
+  overflow: auto;
+  box-shadow: 10px 10px 10px gray;
 }
 
 #result {
@@ -59,14 +62,29 @@ form {
 }
 
 .base {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   z-index: 0;
+  width: 100%;
 }
 
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+}
+
+footer {
+  margin-top: 50px;
+  background-color: #D9CB9E;
+  font-family: palanquin;
+  color: white;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #374140;
 }

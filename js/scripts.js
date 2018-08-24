@@ -74,7 +74,6 @@ $(document).ready(function() {
     //Display result
     $("#result h3").text("Your current total is " + currentTotal);
     $("#result p").text("* $" + baseTotal + " + tax");
-    
-
+    location.href = "#result"
   });
 });
