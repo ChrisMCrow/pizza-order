@@ -8,19 +8,43 @@
     <title>Eats-a-Pizza</title>
   </head>
   <body>
+    <div class="wrapper">
+      <div class="header">
+        <h1>Eats-a-Pizza</h1>
+      </div>
+    </div>
+    <!-- Result -->
+    <div id="result">
+      <h2>Create Your Pizza</h2>
+      <h3></h3>
+      <p></p>
+    </div>
     <div class="container">
-      <h1 class="jumbotron">Eats-a-Pizza</h1>
       <div class="row">
         <div class="col-md-7">
-          <div id="result">
-            <h3></h3>
-            <p></p>
-          </div>
+
+          <!-- Pizza IMG -->
           <div id="pizza">
+            <img src="img/pizza_dough.png" class="base" alt="pizza">
+            <img src="img/pizza_sauce.png" class="overlay" id="pizza_sauceIMG" style="z-index: 1">
+            <img src="img/cheese.png" class="overlay" id="cheeseIMG" style="z-index: 2">
+            <img src="img/herbs.png" class="overlay" id="herbsIMG" style="z-index: 3">
+            <img src="img/pepperoni.png" class="overlay" id="pepperoniIMG" style="z-index: 4; visibility:hidden">
+            <img src="img/bacon.png" class="overlay" id="baconIMG" style="z-index: 5; visibility:hidden">
+            <img src="img/ham.png" class="overlay" id="hamIMG" style="z-index: 6; visibility:hidden">
+
+            <img src="img/mushrooms.png" class="overlay" id="mushroomsIMG" style="z-index: 7; visibility:hidden">
+            <img src="img/onion.png" class="overlay" id="onionIMG" style="z-index: 8; visibility:hidden">
+            <img src="img/black_olives.png" class="overlay" id="black_olivesIMG" style="z-index: 9; visibility:hidden">
+            <img src="img/green_olives.png" class="overlay" id="green_olivesIMG" style="z-index: 10; visibility:hidden">
+            <img src="img/tomatoes.png" class="overlay" id="tomatoesIMG" style="z-index: 11; visibility:hidden">
+            <img src="img/jalapeno.png" class="overlay" id="jalapenoIMG" style="z-index: 12; visibility:hidden">
           </div>
         </div>
         <div class="col-md-5">
           <form>
+
+            <!-- Size Select -->
             <div class="form-group">
               <label for="size">Select size:</label><br>
               <select id="size">
@@ -29,22 +53,38 @@
                 <option value="lg">Large (16")</option>
               </select><br>
             </div>
+
+            <!-- Toppings Select -->
             <div class="form-group">
               <label for="toppings">Select toppings:</label><br>
-              <input id="pizza_sauce" type="checkbox" name="toppings" value="sauce" checked>  Pizza Sauce<br>
-              <input id="cheese" type="checkbox" name="toppings" value="cheese" checked>  Cheese<br>
-              <input id="herbs" type="checkbox" name="toppings" value="herbs" checked>  Herbs<br>
-              <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">  Pepperoni<br>
-              <input id="bacon" type="checkbox" name="toppings" value="bacon">  Bacon<br>
-              <input id="ham" type="checkbox" name="toppings" value="ham">  Ham<br>
-              <input id="mushrooms" type="checkbox" name="toppings" value="mushrooms">  Mushrooms<br>
-              <input id="onion" type="checkbox" name="toppings" value="onion">  Onion<br>
-              <input id="black_olives" type="checkbox" name="toppings" value="black_olives">  Black Olives<br>
-              <input id="green_olives" type="checkbox" name="toppings" value="green_olives">  Green Olives<br>
-              <input id="tomatoes" type="checkbox" name="toppings" value="tomatoes">  Tomatoes<br>
-              <input id="jalapeno" type="checkbox" name="toppings" value="jalapeno">  Jalapenos<br>
+
+              <input id="pizza_sauce" type="checkbox" name="toppings" value="sauce" onclick="document.getElementById('pizza_sauceIMG').style.visibility=(this.checked)?'visible':'hidden';" checked>  Pizza Sauce
+              <br>
+              <input id="cheese" type="checkbox" name="toppings" value="cheese" onclick="document.getElementById('cheeseIMG').style.visibility=(this.checked)?'visible':'hidden';" checked>  Cheese
+              <br>
+              <input id="herbs" type="checkbox" name="toppings" value="herbs" onclick="document.getElementById('herbsIMG').style.visibility=(this.checked)?'visible':'hidden';" checked>  Herbs
+              <br>
+              <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni" onclick="document.getElementById('pepperoniIMG').style.visibility=(this.checked)?'visible':'hidden';">  Pepperoni
+              <br>
+              <input id="bacon" type="checkbox" name="toppings" value="bacon" onclick="document.getElementById('baconIMG').style.visibility=(this.checked)?'visible':'hidden';">  Bacon
+              <br>
+              <input id="ham" type="checkbox" name="toppings" value="ham" onclick="document.getElementById('hamIMG').style.visibility=(this.checked)?'visible':'hidden';">  Ham
+              <br>
+              <input id="mushrooms" type="checkbox" name="toppings" value="mushrooms" onclick="document.getElementById('mushroomsIMG').style.visibility=(this.checked)?'visible':'hidden';">  Mushrooms
+              <br>
+              <input id="onion" type="checkbox" name="toppings" value="onion" onclick="document.getElementById('onionIMG').style.visibility=(this.checked)?'visible':'hidden';">  Onion<br>
+              <input id="black_olives" type="checkbox" name="toppings" value="black_olives" onclick="document.getElementById('black_olivesIMG').style.visibility=(this.checked)?'visible':'hidden';">  Black Olives
+              <br>
+              <input id="green_olives" type="checkbox" name="toppings" value="green_olives" onclick="document.getElementById('green_olivesIMG').style.visibility=(this.checked)?'visible':'hidden';">  Green Olives
+              <br>
+              <input id="tomatoes" type="checkbox" name="toppings" value="tomatoes" onclick="document.getElementById('tomatoesIMG').style.visibility=(this.checked)?'visible':'hidden';">  Tomatoes
+              <br>
+              <input id="jalapeno" type="checkbox" name="toppings" value="jalapeno" onclick="document.getElementById('jalapenoIMG').style.visibility=(this.checked)?'visible':'hidden';">  Jalapenos
+              <br>
             </div>
-            <button type="submit" class="btn btn-danger">Check Price</button>
+
+            <!-- Submit Button -->
+            <a href="#result"><button type="submit" class="btn btn-dark">Check Price</button></a>
           </form>
         </div>
       </div>
