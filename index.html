@@ -5,10 +5,45 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Tic Tac Toe</title>
+    <title>Eats-a-Pizza</title>
   </head>
   <body>
     <div class="container">
+      <h1 class="jumbotron">Eats-a-Pizza</h1>
+      <div class="row">
+        <div class="col-md-7">
+          <div id="pizza">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <form>
+            <div class="form-group">
+              <label for="size">Select size:</label><br>
+              <select id="size">
+                <option value="sm">Small (8")</option>
+                <option value="md">Medium (12")</option>
+                <option value="lg">Large (16")</option>
+              </select><br>
+            </div>
+            <div class="form-group">
+              <label for="toppings">Select toppings:</label><br>
+              <input id="pizza_sauce" type="checkbox" name="toppings" value="basic" checked>  Pizza Sauce<br>  
+              <input id="cheese" type="checkbox" name="toppings" value="basic" checked>  Cheese<br>  
+              <input id="herbs" type="checkbox" name="toppings" value="basic" checked>  Herbs<br>  
+              <input id="pepperoni" type="checkbox" name="toppings" value="meat">  Pepperoni<br>  
+              <input id="bacon" type="checkbox" name="toppings" value="meat">  Bacon<br>  
+              <input id="ham" type="checkbox" name="toppings" value="meat">  Ham<br>  
+              <input id="mushrooms" type="checkbox" name="toppings" value="veggie">  Mushrooms<br>  
+              <input id="onion" type="checkbox" name="toppings" value="veggie">  Onion<br>  
+              <input id="black_olives" type="checkbox" name="toppings" value="veggie">  Black Olives<br>  
+              <input id="green_olives" type="checkbox" name="toppings" value="veggie">  Green Olives<br>  
+              <input id="tomatoes" type="checkbox" name="toppings" value="veggie">  Tomatoes<br>  
+              <input id="jalapeno" type="checkbox" name="toppings" value="veggie">  Jalapenos<br>  
+            </div>
+            <button type="submit" class="btn btn-danger">Proceed to Checkout</button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
